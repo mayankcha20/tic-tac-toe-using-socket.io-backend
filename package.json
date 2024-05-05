@@ -1,1 +1,1 @@
-{"scripts":{"start":"node server.js","server":"nodemon server.js","build":"npm install && npm install --prefix Client && npm run build --prefix Client"},"dependencies":{"dotenv":"^16.4.5","express":"^4.19.2","http":"^0.0.1-security","nodemon":"^3.0.2","socket.io":"^4.7.3"}}
+{"scripts":{"start":"node server.js","server":"nodemon server.js","build":"npm install && npm install --prefix Client && npm run build --prefix Client"},"dependencies":{"cors":"^2.8.5","dotenv":"^16.4.5","express":"^4.19.2","http":"^0.0.1-security","nodemon":"^3.0.2","socket.io":"^4.7.3"}}

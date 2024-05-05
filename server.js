@@ -5,6 +5,7 @@ const path= require("path");
 const express =require("express");
 const app=express();
 const httpServer = createServer();
+app.use(cors());
 const io = new Server(httpServer, {
   cors:process.env.FRONTEND,
 });
