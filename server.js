@@ -1,10 +1,17 @@
 const { createServer } = require("http");
 const { Server } = require("socket.io");
-
+require("dotenv").config();
+const path= require("path");
+const express =require("express");
+const app=express();
 const httpServer = createServer();
 const io = new Server(httpServer, {
-  cors: "http://localhost:5174/",
+  cors:"https://courageous-swan-5d61d4.netlify.app/",
 });
+//.................................Deployment........................
+
+
+
 
 const allUsers = {};
 const allRooms = [];
@@ -81,5 +88,15 @@ io.on("connection", (socket) => {
     }
   });
 });
+// const __dirname1=path.resolve();
+// if(process.env.NODE_ENV==="production"){
+//   console.log("hello");
+//   app.use(express.static(path.join(__dirname1, "/Client/dist")));
 
+//   app.get('*',(req,res)=>{
+//     res.sendFile(path.join(__dirname1, "Client", "dist" ,"index.html"));
+//   });
+// }
+// const PORT=process.env.PORT || 3000;
+// app.listen(PORT,()=> console.log(`Listen on port ${PORT}`))
 httpServer.listen(3000);
