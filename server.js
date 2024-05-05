@@ -6,7 +6,7 @@ const express =require("express");
 const app=express();
 const httpServer = createServer();
 const io = new Server(httpServer, {
-  cors:"https://courageous-swan-5d61d4.netlify.app/",
+  cors:process.env.FRONTEND,
 });
 //.................................Deployment........................
 
